@@ -1,11 +1,11 @@
 FROM python:3.11
 
-WORKDIR /web_hw02_container
-
-RUN pip install -r requirements.txt
+WORKDIR /web_hw02
 
 COPY . .
 
-ENTRYPOINT []
+RUN pip install -r requirements.txt
+
+CMD ["sleep", "infinity"]
 
 EXPOSE 31011
